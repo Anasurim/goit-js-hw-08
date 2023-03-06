@@ -37,6 +37,10 @@ if (savedStorageValues) {
 function onFormSubmit(e) {
   e.preventDefault();
 
+  if (refs.input.value === '' || refs.textarea.value === '') {
+    return alert('You should fill all fields');
+  }
+
   logFormValues();
 
   e.currentTarget.reset();
